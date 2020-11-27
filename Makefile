@@ -1,4 +1,4 @@
-install: install-vim install-bash \
+install: install-aliases install-bash \
          install-git install-python
 
 install-bash:
@@ -12,3 +12,7 @@ install-git:
 install-python:
 	rm -f ~/.pythonstartup.py
 	cp `pwd`/pythonstartup.py ~/.pythonstartup.py
+
+install-aliases:
+	mv ~/.aliases ~/.aliases_bk
+	cp `pwd`/aliases ~/.aliases
