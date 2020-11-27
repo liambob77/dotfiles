@@ -1,0 +1,37 @@
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+alias diff='diff --color=auto'
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -vI'
+alias mkdir='mkdir -pv'
+alias less='less -FSRXc'
+alias ll='ls -FGlAhp'
+alias la='ls -lahrt'
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec ${SHELL} -l"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+alias h3='history 30'
+alias cd..='cd ../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias .3='cd ../../../'
+alias .4='cd ../../../../'
+alias ~="cd ~"
+alias c='clear'
+mcd () { mkdir -p "$1" && cd "$1"; }
+
+alias printenv="printenv | sort"
+alias vncserver="vncserver -cc 4 -depth 24 -alwaysshared -geometry 1920x1080"
+
+# for ocs stuff
+if [[ ${HOSTNAME} = "chshst02.sh.lucent.com" ]]; then
+  alias neat="/home/beat/neat/tools/neat"
+  alias ct='cleartool'
+  alias co='clearcase -ocs'
+fi
