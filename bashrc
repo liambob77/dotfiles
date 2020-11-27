@@ -1,6 +1,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
 export EDITOR=vim
 export GIT_EDITOR=vim
 
