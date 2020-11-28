@@ -35,3 +35,8 @@ if [[ ${HOSTNAME} = "chshst02.sh.lucent.com" ]]; then
   alias ct='cleartool'
   alias co='clearcase -ocs'
 fi
+
+# Include custom aliases
+if [[ -f ~/.aliases.local ]]; then
+  source ~/.aliases.local
+fi
